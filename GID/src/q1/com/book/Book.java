@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Book {
-    final List<String> ACCEPTED_CATEGORIES = Arrays.asList("science", "fiction", "technology", "others");
+    static final List<String> ACCEPTED_CATEGORIES = Arrays.asList("science", "fiction", "technology", "others");
     private String bookId;
     private String title;
     private String author;
