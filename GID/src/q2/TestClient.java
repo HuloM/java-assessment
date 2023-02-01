@@ -16,10 +16,13 @@ public class TestClient {
         String language = scanner.nextLine();
 
         if (language.equalsIgnoreCase("Java")) {
+            // if user selects Java, Java thread will be given higher priority
             RunPriorityThread("Java was selected", jThread, cThread);
         } else if (language.equalsIgnoreCase("C")) {
+            // if user selects C, C thread will be given higher priority
             RunPriorityThread("C was selected", cThread, jThread);
         } else {
+            // if the user selects any other language, the program will exit
             System.out.println("Invalid language");
         }
     }

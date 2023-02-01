@@ -11,9 +11,10 @@ public class BookUtil {
     public static void main(String[] args) {
         BookStore bookStore = new BookStore();
         try {
-            bookStore.addBook(createbookEntry());
-            bookStore.addBook(createbookEntry());
-            bookStore.addBook(createbookEntry());
+            for (int i = 0; i < 3; i++) {
+                // create and add 3 new books to the book store
+                bookStore.addBook(createbookEntry());
+            }
 
             bookStore.searchByAuthor("J.R.R Tolkien");
             bookStore.searchByTitle("Lord of the rings");
@@ -26,6 +27,7 @@ public class BookUtil {
         }
     }
 
+    // This method is used to create a new book to be added to the book store
     static Book createbookEntry() throws InvalidBookException {
         System.out.print("Enter book id: ");
         String bookId = scanner.nextLine();

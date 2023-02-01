@@ -14,10 +14,13 @@ public class Book {
     private float price;
 
     public Book(String bookId, String title, String author, String category, float price) throws InvalidBookException {
+        // as per requirements, bookId must start with ‘B’ and must be of length 4 characters
         if (!bookId.startsWith("B") || bookId.trim().length() > 4)
             throw new InvalidBookException("bookID must start with ‘B’ and must be of length 4 characters");
+        // as per requirements, the price cannot be negative
         if (price < 0)
             throw new InvalidBookException("price cannot be negative");
+        // as per requirements, the category must be one of the following: science, fiction, technology, or others
         if(!ACCEPTED_CATEGORIES.contains(category.toLowerCase()))
             throw new InvalidBookException("category must be one of the following: " + ACCEPTED_CATEGORIES.toString());
 

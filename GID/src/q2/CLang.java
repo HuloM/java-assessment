@@ -8,6 +8,7 @@ public class CLang implements Language, Runnable {
 
     @Override
     public void run() {
+        // this will print the show message 10 times
         for (int i = 0; i < 10; i++){
             showMessage();
             try {
